@@ -6,11 +6,11 @@ import torch.nn.functional as F
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 batch_size = 64
 block_size = 256
-epochs = 5000
+epochs = 2200
 lr = 3e-4
 eval_iter = 200
 num_of_head = 6
-eval_interval = 500
+eval_interval = 200
 embed_dim =  384 #vecto dim representing each token
 #head size = embed_dim / num_of_head
 dropout = 0.2
@@ -215,9 +215,4 @@ for iter in range(epochs):
     optimizer.zero_grad(set_to_none=True)
     loss.backward()
     optimizer.step()
-
-# generate from the model
-#context = torch.zeros((1, 1), dtype=torch.long, device=device)
-#print(decode(m.generate(context, max_new_tokens=500)[0].tolist()))
-#open('more.txt', 'w').write(decode(m.generate(context, max_new_tokens=10000)[0].tolist()))
-            
+print('model training done')
