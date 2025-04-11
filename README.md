@@ -10,12 +10,22 @@ A simple implementation of a character-level transformer language model using Py
 - Stack of transformer blocks
 - Training and validation loss estimation
 - Text generation capability
-
+```
 ## 🗂️ Project Structure
 📁 gpt-transformer/ 
-  ├── gpt.py # Main implementation of the GPT model
+  ├── gpt.py # Main implementation of the GPT model, train, generation
   ├── input.txt # Training input data
   ├── output.txt # Generated output from the model
   ├── gpt-transformer.pth # Example of trained model weights
   └── README.md # Project documentation
+```
+## 🚀 Usage
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/tarek1488/gpt-transformer.git
+cd gpt-transformer
+python gpt.py
+
 
